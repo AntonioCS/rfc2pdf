@@ -50,7 +50,7 @@ target_compile_options(${OUTPUT_FILE}
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${OUTPUT_FILE})
 
 find_path(LIBHARU_INCLUDE_DIR NAMES hpdf.h REQUIRED)
-find_library(LIBHARU_LIBRARY NAMES libhpdf REQUIRED)
+find_library(LIBHARU_LIBRARY NAMES libhpdfd libhpdf REQUIRED)
 
 target_include_directories(${OUTPUT_FILE} PRIVATE "${LIBHARU_INCLUDE_DIR}")
 target_link_libraries(${OUTPUT_FILE} PRIVATE ${LIBHARU_LIBRARY})
